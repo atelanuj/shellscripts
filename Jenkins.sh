@@ -13,3 +13,5 @@ sudo apt update
 sudo apt install jenkins -y
 
 sudo systemctl status jenkins.service
+
+sudo ufw allow 8080
