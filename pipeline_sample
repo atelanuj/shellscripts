@@ -1,0 +1,21 @@
+pipeline {
+    agent any
+    stages {
+        stage('Install Nginx') {
+            steps {
+                sh 'sudo apt-get update'
+                sh 'sudo apt-get install nginx -y'
+            }
+        }
+        stage('Create index.html') {
+            steps {
+                sh 'echo "<html><body><h1>Welcome to my website!</h1></body></html>" | sudo tee /var/www/html/index.html'
+            }
+        }
+        stage('Restart Nginx') {
+            steps {
+                sh 'sudo service nginx restart'
+            }
+        }
+    }
+}
