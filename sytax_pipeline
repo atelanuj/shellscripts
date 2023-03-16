@@ -1,0 +1,21 @@
+pipeline {
+    agent {label "node-1"}
+    stages {
+        stage('Built') {
+            steps {
+                sh 'echo "this is a built stage"'
+                sh 'commad2'
+            }
+        }
+        stage('test') {
+            steps {
+                sh 'echo "this is a test stage"'
+            }
+        }
+        stage('Deploy') {
+            steps {
+                sh 'echo "this is a deploy stage"'
+            }
+        }
+    }
+}
