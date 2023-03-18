@@ -8,21 +8,21 @@ pipeline {
                 {
                     steps{
                     echo "Welcome to Young Minds!"
-                    sleep 5
+                    //sleep 5
                     }
                 }	
                 stage	('Stage-2')
                 {
                     steps{
                     echo "Keep Learning!!"
-                    sleep 5
+                    //sleep 5
                     }
                 }
                 stage	('Stage-3')
                 {
                     steps{
                     echo "Keep Growing!!"
-                    sleep 5
+                    //sleep 5
                     }
                 }	
             }
