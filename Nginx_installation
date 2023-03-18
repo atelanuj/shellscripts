@@ -1,0 +1,26 @@
+pipeline {
+    agent node("node-label")
+    stages {
+        stage("Install Nginx") {
+            steps {
+                sh 'sudo apt update -y'
+                sh 'sudo apt install nginx -y'
+            }
+        }
+        stage("check status") {
+            steps {
+                sh 'sudo systemctl status nginx.service'
+            }
+        }
+        stage("stop nginx") {
+            steps {
+                sh 'sudo systemctl stop nginx.service'
+            }
+        }
+        stage("start nginx") {
+            steps {
+                sh 'sudo systemctl start nginx.service'
+            }
+        }
+    }
+}
