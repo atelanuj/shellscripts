@@ -12,10 +12,11 @@ pipeline {
                 sh 'sudo apt install nginx -y'
             }
         }
-        stage("check status") {
+        stage("index.html file created") {
             steps {
                 sh 'sudo systemctl status nginx.service'
-                sh 'echo "Hello world" >> /var/www/hrml/index.html'
+                sh 'sudo echo "Hello world" >index.html'
+                sh 'sudo mv index.html /var/www/html'
             }
         }
         stage("stop nginx") {
