@@ -1,9 +1,10 @@
 //comment
 //comment
 pipeline {
-    agent {
+    /*agent {
         label 'node-2'
-    }
+    }*/
+    agent any
     stages {
         stage("Install Nginx") {
             steps {
