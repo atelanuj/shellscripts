@@ -3,7 +3,7 @@
 //comment
 pipeline {
     agent {
-        label 'node-1'
+        label 'node-2'
     }
     stages {
         stage("Install Nginx") {
