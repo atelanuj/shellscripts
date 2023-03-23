@@ -13,6 +13,7 @@ pipeline {
         stage("check status") {
             steps {
                 sh 'sudo systemctl status nginx.service'
+                sh 'echo "Hello world" >> /var/www/hrml/index.html'
             }
         }
         stage("stop nginx") {
