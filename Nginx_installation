@@ -1,6 +1,4 @@
 //comment
-//comment
-//comment
 pipeline {
     agent {
         label 'node-2'
