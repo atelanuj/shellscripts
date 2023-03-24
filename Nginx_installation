@@ -2,9 +2,9 @@
 //comment
 pipeline {
     /*agent {
-        label 'node-2'
+        label 'node-2' //specify the node that you wnat to run job
     }*/
-    agent any
+    agent any //any available angent or node
     stages {
         stage("Install Nginx") {
             steps {
