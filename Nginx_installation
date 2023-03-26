@@ -1,4 +1,6 @@
 //comment
+// You need add below entery in  /etc/sudoers file
+//jenkins ALL=(ALL) NOPASSWD: ALL
 pipeline {
     /*agent {
         label 'node-2' //specify the node that you wnat to run job
