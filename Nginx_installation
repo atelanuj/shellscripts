@@ -1,5 +1,4 @@
 //comment
-//comment
 pipeline {
     /*agent {
         label 'node-2' //specify the node that you wnat to run job
