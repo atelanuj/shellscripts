@@ -1,0 +1,11 @@
+#!/bin/bash
+
+#ssh-keygen -t rsa
+
+
+# Get the SSH public key from the master node
+ssh_pub_key=$(ssh <master-node> "cat ~/.ssh/id_rsa.pub")
+
+
+# Copy the SSH public key to the slave node
+ssh <slave-node> "mkdir -p ~/.ssh && echo $ssh_pub_key >> ~/.ssh/authorized_keys"
