@@ -1,4 +1,4 @@
---- #Sample Playbook
+---                       #Sample Playbook
 -hosts: grp1              #select node/group
  user: root               #select user on node
  become: yes              #sudo privillage
