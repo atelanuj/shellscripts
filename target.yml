@@ -1,10 +1,12 @@
 ---
 - hosts: grp1
- user: root
- become: yes
- connection: ssh
- tasks:
- - name: install httpd
-   yum:
-     name: httpd
-     state: present  
+  user: root
+  become: yes
+  connection: ssh
+  tasks:
+  - name: install httpd
+    apt:
+      pkg: httpd
+      state: present
+
+
