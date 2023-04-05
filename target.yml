@@ -1,8 +1,10 @@
 ---
--hosts: grp1
+- hosts: grp1
  user: root
  become: yes
  connection: ssh
  tasks:
- -name: install httpd
-  action: yum name=httpd state=present
+ - name: install httpd
+   yum:
+     name: httpd
+     state: present  
