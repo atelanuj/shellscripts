@@ -4,9 +4,13 @@
   become: yes
   connection: ssh
   tasks:
-  - name: install httpd
+  - name: install nginx
     apt:
-      pkg: httpd
+      pkg: nginx
       state: present
+  - name: nginx status
+    service:
+      name: nginx
+      state: stopped      
 
 
