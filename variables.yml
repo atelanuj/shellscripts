@@ -4,9 +4,21 @@
   user: root
   become: yes
   vars:
-   packagename: tree
+   packagename1: tree
+   packagename2: docker.io
   tasks:
-  - name: installing '{{ packagename }}'
+  - name: installing '{{packagename1}}'
     apt:
-     pkg: '{{packagename}}'
+     pkg: '{{packagename1}}'
      state: present
+  - name: install '{{packagename2}}'
+    apt:
+     pkg: '{{packagename2}}'
+     state: present
+  - name: copy operation
+    copy:
+     src: 
+     - /PATH1/
+     - /PATH2/
+     dest: /Destination_PATH
+      
