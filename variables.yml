@@ -1,0 +1,12 @@
+---
+- hosts: grp1
+  connection: ssh
+  user: root
+  become: yes
+  vars:
+   packagename: tree
+  tasks:
+  - name: installing '{{ packagename }}'
+    apt:
+     pkg: '{{packagename}}'
+     state: present
