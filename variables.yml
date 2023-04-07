@@ -22,7 +22,5 @@
     copy:
      src: /root/anuj2.txt 
      dest: /tmp/
-    with_items:
-     - anuj1.txt
-     - anuj2.txt
+    
       
